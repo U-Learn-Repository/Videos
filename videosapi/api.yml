@@ -1,0 +1,188 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Api_Videos_ULearn",
+    "contact": {}
+  },
+  "host": "localhost:8000",
+  "basePath": "/api/v1",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/video": {
+      "get": {
+        "description": "ver todos los videos",
+        "summary": "Ver todos los videos",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Vertodoslosvideos",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "Subir un video\n",
+        "summary": "Subir un video",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Subirunvideo",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "adjunto",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "prueba"
+          },
+          {
+            "name": "id_curso",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "id_capitulo",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "id_tema",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "descripcion",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/video/1": {
+      "get": {
+        "summary": "Buscar video por id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Buscarvideoporid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/video/2": {
+      "delete": {
+        "summary": "Eliminar video por id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Eliminarvideoporid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/video/edit/1": {
+      "post": {
+        "description": "Pide la descripción y el archivo",
+        "summary": "Editar video por id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Editarvideoporid",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "adjunto",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "act"
+          },
+          {
+            "name": "descripcion",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}

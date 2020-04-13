@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "33a7c100-96fb-4cc8-aff6-f800877713ce",
+		"name": "Api_Videos_ULearn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ver todos los videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"video"
+					]
+				},
+				"description": "ver todos los videos"
+			},
+			"response": []
+		},
+		{
+			"name": "Subir un video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "adjunto",
+							"description": "prueba",
+							"type": "file",
+							"src": "/C:/tmp/1. ¿Que es PHP.mp4"
+						},
+						{
+							"key": "id_curso",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_capitulo",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_tema",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Segundo video",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"video"
+					]
+				},
+				"description": "Subir un video\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar video por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/video/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"video",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar video por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/video/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"video",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar video por id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "adjunto",
+							"description": "act",
+							"type": "file",
+							"src": "/C:/Users/ASUS/Desktop/Cursos_Udemy/Master en PHP, SQL, POO, MVC, Laravel, Symfony, WordPress +/3. HTML (Repaso opcional)/3. Estructura HTML.mp4"
+						},
+						{
+							"key": "descripcion",
+							"value": "actualizado",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/video/edit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"video",
+						"edit",
+						"1"
+					]
+				},
+				"description": "Pide la descripción y el archivo"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

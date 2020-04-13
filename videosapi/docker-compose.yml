@@ -33,14 +33,14 @@ services:
       - videosapi
 
   nginx:
-    image: nginx:alpine
+    image: nginx:1.17-alpine
     container_name: videosapi-nginx
     restart: unless-stopped
     ports:
       - 8000:80
     volumes:
       - ./:/var/www
-      - ./docker-compose/nginx:/etc/nginx/conf.d/
+      - ./docker-compose/nginx:/etc/nginx/conf.d
     networks:
       - videosapi
 

@@ -24,33 +24,6 @@ class VideoController extends Controller
 
      public function create(Request $request)
      {
-         /*
-         $validate = $this->validate($request, [
-             'adjunto' => 'required|mimes:jpg,jpeg,png'
-         ]); */
-         /*        
-         $video = new Video;
-
-         $video->id_curso= $request->id_curso;
-         $video->id_tema= $request->id_tema;
-         $video->id_capitulo= $request->id_capitulo;       
-         $video->archivo = '../video/video' .$request->input('id_curso') .'_' .$request->input('id_tema') .'_' .$request->input('id_capitulo');
-       
-         $video->save();
-
-         //$product = Product::create($request->all());
-
-         return response()->json($video); 
-          * 
-          */
-         /*
-         $filename = "user_image.jpg";
-         $path = $request->file('adjunto')->move("/", $filename);
-         $archivoURL = url('/' .$filename);
-         
-         return response()->json(['url' => $archivoURL], 200);
-         */
-         
          $video = new Video;
          
          $video->id_curso= $request->id_curso;
@@ -63,11 +36,7 @@ class VideoController extends Controller
          if(!function_exists('public_path'))
             {
 
-                /**
-                * Return the path to public dir
-                * @param null $path
-                * @return string
-                */
+   
                 function public_path($path=null)
                 {
                         return rtrim(app()->basePath('public/'.$path), '/');
@@ -104,11 +73,6 @@ class VideoController extends Controller
         if(!function_exists('public_path'))
             {
 
-                /**
-                * Return the path to public dir
-                * @param null $path
-                * @return string
-                */
                 function public_path($path=null)
                 {
                         return rtrim(app()->basePath('public/'.$path), '/');

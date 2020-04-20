@@ -20,9 +20,11 @@ services:
     image: mysql:5.7
     container_name: videosapi-db
     restart: unless-stopped
+    ports:
+      - 6672:3306
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_USER: ${DB_USERNAME}
       SERVICE_TAGS: dev
@@ -37,7 +39,7 @@ services:
     container_name: videosapi-nginx
     restart: unless-stopped
     ports:
-      - 8000:80
+      - 6673:80
     volumes:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d

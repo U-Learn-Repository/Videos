@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "33a7c100-96fb-4cc8-aff6-f800877713ce",
-		"name": "Api_Videos_ULearn",
+		"_postman_id": "ee53be4c-731b-462b-a17e-7ed983054938",
+		"name": "Api_Videos_ULearn copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/video",
+					"raw": "http://localhost:6673/api/v1/video",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "6673",
 					"path": [
 						"api",
 						"v1",
@@ -64,12 +64,12 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v1/video",
+					"raw": "http://localhost:6673/api/v1/video",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "6673",
 					"path": [
 						"api",
 						"v1",
@@ -86,12 +86,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/video/1",
+					"raw": "http://localhost:6673/api/v1/video/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "6673",
 					"path": [
 						"api",
 						"v1",
@@ -108,17 +108,17 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/video/2",
+					"raw": "http://localhost:6673/api/v1/video/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "6673",
 					"path": [
 						"api",
 						"v1",
 						"video",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -146,12 +146,12 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v1/video/edit/1",
+					"raw": "http://localhost:6673/api/v1/video/edit/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "6673",
 					"path": [
 						"api",
 						"v1",

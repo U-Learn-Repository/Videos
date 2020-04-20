@@ -1,3 +1,6 @@
+(Como el .env no sube a github, lo deje en (.env.example), entonces renombrar este archivo como (.env) -que quede como un env file)
+
+
 habilitar puertos 6673-6673 y 6672-6672
 docker-compose build
 docker-compose up -d
